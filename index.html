@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Próximamente. En ruta de aprendizaje."
+    >
+
+    <title>Próximamente...</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="room" id="room">
+
+                <div class="wall-texture"></div>
+
+                <div class="window">
+
+                    <div class="sky"></div>
+
+                    <div class="moon"></div>
+
+                    <div class="city">
+                        <div class="building b1"></div>
+                        <div class="building b2"></div>
+                        <div class="building b3"></div>
+                        <div class="building b4"></div>
+                        <div class="building b5"></div>
+                    </div>
+
+                    <div
+                        class="rain"
+                        id="rain"
+                    ></div>
+
+                    <div class="window-v"></div>
+                    <div class="window-h"></div>
+
+                </div>
+
+                <div class="message">
+
+                    <div class="message-small">
+                        LM / DEV
+                    </div>
+
+                    <h1>
+                        PRÓXIMAMENTE<span class="cursor">_</span>
+                    </h1>
+
+                    <p>
+                        EN RUTA DE APRENDIZAJE
+                    </p>
+
+                </div>
+
+                <div class="light-cone"></div>
+
+                <div class="lamp-system">
+
+                    <div class="lamp-wire"></div>
+
+                    <div class="bulb-holder"></div>
+
+                    <div class="bulb"></div>
+
+                    <div
+                        class="pull-container"
+                        id="pullArea"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Jalar cordón para encender o apagar la luz"
+                    >
+
+                        <div
+                            class="rope"
+                            id="rope"
+                        ></div>
+
+                        <div
+                            class="handle"
+                            id="handle"
+                        ></div>
+
+                    </div>
+
+                    <div class="pull-hint">
+                        JALAR
+                    </div>
+
+                </div>
+
+                <div class="monitor">
+
+                    <div class="screen">
+
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+
+                    </div>
+
+                    <div class="monitor-stand"></div>
+
+                </div>
+
+                <div class="desk"></div>
+
+                <div class="keyboard"></div>
+
+                <div class="coffee"></div>
+
+                <div class="steam one"></div>
+                <div class="steam two"></div>
+
+                <div class="chair"></div>
+
+                <div class="person">
+
+                    <div class="head">
+
+                        <div class="hair"></div>
+
+                        <div class="headphones"></div>
+
+                    </div>
+
+                    <div class="body"></div>
+
+                </div>
+
+                <div class="cat">
+
+                    <div class="ear one"></div>
+
+                    <div class="ear two"></div>
+
+                    <div class="tail"></div>
+
+                </div>
+
+                <div
+                    class="clock"
+                    id="clock"
+                >
+                    00:00
+                </div>
+
+                <div
+                    class="flash"
+                    id="flash"
+                ></div>
+
+                <div class="pixel-overlay"></div>
+
+            </div>
+
+        </section>
+
+        <section
+            class="comments-section"
+            id="comments"
+        >
+
+            <div class="comments-wrapper">
+
+                <div class="comments-header">
+
+                    <span class="section-label">
+                        LM / VISITANTES
+                    </span>
+
+                    <h2>
+                        Dejar comentario
+                    </h2>
+
+                    <p>
+                        Si llegaste hasta aquí, puedes dejar algo para el camino.
+                    </p>
+
+                </div>
+
+                <div class="comments-layout">
+
+                    <div class="comment-form-container">
+
+                        <form
+                            class="comment-form"
+                            id="commentForm"
+                        >
+
+                            <div class="field">
+
+                                <label for="name">
+                                    Nombre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    maxlength="40"
+                                    autocomplete="name"
+                                    placeholder="Tu nombre"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="field">
+
+                                <label for="comment">
+                                    Comentario
+                                </label>
+
+                                <textarea
+                                    id="comment"
+                                    name="comment"
+                                    maxlength="500"
+                                    placeholder="Escribe algo..."
+                                    required
+                                ></textarea>
+
+                                <div class="field-footer">
+
+                                    <span
+                                        class="form-status"
+                                        id="formStatus"
+                                        aria-live="polite"
+                                    ></span>
+
+                                    <span
+                                        class="counter"
+                                        id="commentCounter"
+                                    >
+                                        0 / 500
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <button
+                                class="submit-button"
+                                id="submitButton"
+                                type="submit"
+                            >
+                                <span>
+                                    PUBLICAR COMENTARIO
+                                </span>
+
+                                <span class="button-arrow">
+                                    →
+                                </span>
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="comments-info">
+
+                        <div class="info-number">
+                            <span id="commentsCount">
+                                000
+                            </span>
+                        </div>
+
+                        <div class="info-text">
+                            COMENTARIOS EN EL CAMINO
+                        </div>
+
+                        <div class="info-line"></div>
+
+                        <p>
+                            Cada mensaje formará parte de esta pequeña etapa mientras el sitio continúa creciendo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-section">
+
+                    <div class="carousel-heading">
+
+                        <div>
+                            <span class="section-label">
+                                MENSAJES
+                            </span>
+
+                            <h3>
+                                Lo que han dejado por aquí
+                            </h3>
+                        </div>
+
+                        <div class="carousel-status">
+
+                            <span class="status-dot"></span>
+
+                            <span id="carouselStatus">
+                                MOVIÉNDOSE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="carousel"
+                        id="carousel"
+                    >
+
+                        <div
+                            class="carousel-track"
+                            id="carouselTrack"
+                        ></div>
+
+                    </div>
+
+                    <div class="carousel-help">
+                        PASA EL CURSOR PARA DETENER · SELECCIONA UN MENSAJE PARA LEERLO
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div
+        class="comment-modal"
+        id="commentModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div
+            class="modal-stage"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalName"
+        >
+
+            <div class="modal-decoration decoration-one"></div>
+            <div class="modal-decoration decoration-two"></div>
+            <div class="modal-decoration decoration-three"></div>
+
+            <div class="modal-content">
+
+                <div class="modal-top">
+
+                    <div class="modal-code">
+                        MENSAJE / <span id="modalNumber">001</span>
+                    </div>
+
+                    <button
+                        class="modal-close"
+                        id="modalClose"
+                        type="button"
+                        aria-label="Cerrar comentario"
+                    >
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+
+                <div class="modal-author">
+
+                    <div
+                        class="modal-avatar"
+                        id="modalAvatar"
+                    >
+                        L
+                    </div>
+
+                    <div>
+
+                        <span class="modal-label">
+                            ESCRITO POR
+                        </span>
+
+                        <h2 id="modalName">
+                            Nombre
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <p
+                    class="modal-message"
+                    id="modalMessage"
+                ></p>
+
+                <div class="modal-footer">
+
+                    <span id="modalDate"></span>
+
+                    <span>
+                        LM / EN RUTA DE APRENDIZAJE
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
