@@ -2,16 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>lrmartinez.dev · en construcción 🚧</title>
-  <meta name="description" content="Portafolio de LR Martínez, dev junior. El sitio todavía se está construyendo, pero ya hay mucho que ver." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Luis Martínez | Página Principal</title>
+  <meta name="description" content="Página principal de Luis Martínez, desarrollador junior. Proyectos, stack y contacto. El sitio sigue en construcción." />
   <meta name="theme-color" content="#f3ecdf" />
+  <link rel="canonical" href="https://lrmartinez.dev/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_GT" />
+  <meta property="og:title" content="Luis Martínez | Página Principal" />
+  <meta property="og:description" content="Desarrollador junior en formación. Proyectos, stack y contacto." />
+  <meta property="og:url" content="https://lrmartinez.dev/" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff5a36'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial,sans-serif' font-size='30' font-weight='900' text-anchor='middle' fill='%2314110f'%3ELM%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Caveat:wght@600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="loading">
+<body>
+
+  <!-- ============ Iconos (sprite SVG) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+      <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></symbol>
+      <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+      <symbol id="i-commit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 12h6"/><path d="M15 12h6"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+      <symbol id="i-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></symbol>
+      <symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+      <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+      <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#top">Saltar al contenido</a>
 
   <!-- Pantalla de carga -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -24,21 +71,55 @@
   <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
 
   <div class="meter" id="meter" aria-hidden="true">
-    <span class="m-a">🚧 sitio construido al <b id="pct">0</b>%</span>
+    <span class="m-a"><svg class="ico"><use href="#i-wrench"/></svg> construido al <b id="pct">0</b>%</span>
     <span class="m-b">100%… mentira, falta bastante</span>
   </div>
 
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa" id="wa"
+     href="https://wa.me/50259270517?text=Hola%20Luis%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Escribirme por WhatsApp al +502 5927 0517" data-cursor="whatsapp">
+    <span class="wa-label">Escríbeme</span>
+    <span class="wa-btn"><svg class="ico fill"><use href="#i-whatsapp"/></svg></span>
+  </a>
+
+  <!-- ============ Navegación ============ -->
   <header class="nav">
-    <a class="brand" href="#top" id="brand">lr<span>.dev</span></a>
-    <nav aria-label="Principal">
+    <a class="brand" href="#top" id="brand">lrmartinez<span>.dev</span></a>
+
+    <nav class="nav-links" aria-label="Principal">
       <a href="#sobre">sobre mí</a>
       <a href="#proyectos">proyectos</a>
       <a href="#stack">stack</a>
       <a href="#camino">camino</a>
       <a href="#contacto">contacto</a>
     </nav>
-    <div class="pill">🚧 en construcción</div>
+
+    <div class="pill"><svg class="ico"><use href="#i-wrench"/></svg> en construcción</div>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
   </header>
+
+  <!-- Menú para pantallas chicas -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu-nav" aria-label="Menú móvil">
+      <a href="#sobre"><i>01</i> sobre mí</a>
+      <a href="#proyectos"><i>02</i> proyectos</a>
+      <a href="#stack"><i>03</i> stack</a>
+      <a href="#camino"><i>04</i> camino</a>
+      <a href="#contacto"><i>05</i> contacto</a>
+    </nav>
+    <div class="menu-foot">
+      <a href="https://wa.me/50259270517" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg class="ico fill"><use href="#i-whatsapp"/></svg></a>
+      <!-- EDITA AQUÍ: tus links reales -->
+      <a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a>
+      <a href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a>
+      <a href="mailto:TU_CORREO@ejemplo.com" aria-label="Correo"><svg class="ico"><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
 
   <main id="top">
 
@@ -46,7 +127,7 @@
     <section class="hero" data-bg="#f3ecdf" data-ink="#14110f">
       <div class="stickers" aria-hidden="true">
         <div class="sticker st-1" data-speed="0.10" data-depth="1.2" style="--rot:12deg">v0.0.1<br />beta<br />(muy beta)</div>
-        <div class="sticker st-2" data-speed="0.22" data-depth="-1" style="--rot:-8deg">WIP 🚧</div>
+        <div class="sticker st-2" data-speed="0.22" data-depth="-1" style="--rot:-8deg"><svg class="ico"><use href="#i-wrench"/></svg> WIP</div>
         <div class="sticker st-3" data-speed="0.06" data-depth="1.6" style="--rot:5deg">console.log("hola");</div>
         <div class="hand st-4" data-speed="0.14" data-depth="0.8">
           sí, soy yo
@@ -56,29 +137,29 @@
 
       <p class="eyebrow reveal">// lrmartinez.dev · v0.0.1</p>
 
-      <h1 class="title" aria-label="Hola, soy LR Martínez">
+      <h1 class="title" aria-label="Hola, soy Luis Martínez">
         <span class="line"><span class="split">HOLA,</span></span>
-        <span class="line"><span class="split">SOY LR</span></span>
+        <span class="line"><span class="split">SOY LUIS</span></span>
         <span class="line"><span class="split accent-word">MARTÍNEZ</span></span>
       </h1>
 
-      <!-- ✏️ EDITA AQUÍ: tu presentación corta -->
+      <!-- EDITA AQUÍ: tu presentación corta -->
       <p class="lead reveal" style="--d:.15s">
         Dev junior en formación. Hago cosas con código, café y mucho
         <span class="hl">"¿por qué no funciona?"</span>
       </p>
 
       <div class="cta reveal" style="--d:.3s">
-        <a class="btn" href="#proyectos">ver lo que he hecho</a>
-        <a class="btn ghost" href="#contacto">hablemos</a>
+        <a class="btn" href="#proyectos">ver lo que he hecho <svg class="ico"><use href="#i-arrow-down"/></svg></a>
+        <a class="btn ghost" href="#contacto">hablemos <svg class="ico"><use href="#i-mail"/></svg></a>
       </div>
 
-      <a class="scroll-badge" href="#sobre" aria-label="Bajar" data-cursor="bajar">
-        <svg viewBox="0 0 130 130" aria-hidden="true">
+      <a class="scroll-badge" href="#sobre" aria-label="Bajar a la siguiente sección" data-cursor="bajar">
+        <svg class="ring-text" viewBox="0 0 130 130" aria-hidden="true">
           <defs><path id="circ" d="M65,65 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0" /></defs>
-          <text><textPath href="#circ" textLength="296" lengthAdjust="spacing">SCROLL ↓ SCROLL ↓ SCROLL ↓ SCROLL ↓ </textPath></text>
+          <text><textPath href="#circ" textLength="296" lengthAdjust="spacing">SCROLL — SCROLL — SCROLL — SCROLL — </textPath></text>
         </svg>
-        <b>↓</b>
+        <svg class="ico arrow"><use href="#i-arrow-down"/></svg>
       </a>
     </section>
 
@@ -86,21 +167,29 @@
     <section class="marquees" data-bg="#14110f" data-ink="#f3ecdf" aria-hidden="true">
       <div class="mq mq-a" data-dir="-1">
         <div class="mq-track">
-          <div class="mq-group"><span>en construcción</span><i>✺</i><span>aguanta tantito</span><i>✺</i><span>junior pero con ganas</span><i>✺</i></div>
+          <div class="mq-group">
+            <span>en construcción</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+            <span>aguanta tantito</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+            <span>junior pero con ganas</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+          </div>
         </div>
       </div>
       <div class="mq mq-b" data-dir="1">
         <div class="mq-track">
-          <div class="mq-group"><span>funciona en mi compu</span><i>★</i><span>commit: "arreglos"</span><i>★</i><span>git push --force (jamás)</span><i>★</i></div>
+          <div class="mq-group">
+            <span>funciona en mi compu</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+            <span>commit: "arreglos"</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+            <span>git push --force (jamás)</span><i class="sep"><svg class="ico fill"><use href="#i-star"/></svg></i>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SOBRE MÍ (texto que se ilumina con el scroll) ============ -->
+    <!-- ============ SOBRE MÍ ============ -->
     <section class="about" id="sobre" data-bg="#14110f" data-ink="#f3ecdf">
       <div class="about-sticky">
         <p class="tag">01 / sobre mí</p>
-        <!-- ✏️ EDITA AQUÍ: las palabras con * al inicio salen resaltadas -->
+        <!-- EDITA AQUÍ: las palabras con * al inicio salen resaltadas -->
         <p class="words" id="words" data-text="Estoy aprendiendo a programar *construyendo* cosas de verdad. Me equivoco, lo arreglo, aprendo y vuelvo a empezar. No soy experto en nada todavía, pero me emociona *todo*. Si algo se ve bonito y además *funciona*, ya me ganó.">
           Estoy aprendiendo a programar construyendo cosas de verdad. Me equivoco, lo arreglo, aprendo y vuelvo a empezar. No soy experto en nada todavía, pero me emociona todo. Si algo se ve bonito y además funciona, ya me ganó.
         </p>
@@ -108,49 +197,49 @@
       </div>
     </section>
 
-    <!-- ============ PROYECTOS (scroll horizontal) ============ -->
+    <!-- ============ PROYECTOS ============ -->
     <section class="hscroll" id="proyectos" data-bg="#ffd23f" data-ink="#14110f">
-      <div class="hs-sticky">
-        <div class="hs-head reveal">
+      <div class="hs-sticky" id="hsSticky">
+        <div class="hs-head reveal" id="hsHead">
           <p class="tag">02 / proyectos</p>
           <h2>Lo que he armado <span class="hl">(hasta ahora)</span></h2>
         </div>
 
         <div class="hs-track" id="hsTrack">
           <article class="card" style="--r:-1.5deg">
-            <span class="num">01</span>
+            <div class="card-top"><span class="num">01</span><span class="card-ico"><svg class="ico"><use href="#i-book"/></svg></span></div>
             <h3>Sistema de librería</h3>
             <p>Sistema web para una tienda de libros, papelería y útiles escolares. Productos por SKU, precios en quetzales y ventas rápidas.</p>
             <ul class="tags"><li>React</li><li>Node.js</li><li>MySQL</li></ul>
-            <!-- ✏️ EDITA AQUÍ: pon tu usuario de GitHub -->
-            <a class="link" href="https://github.com/TU_USUARIO/sistema-libreria" target="_blank" rel="noopener" data-cursor="abrir">ver repo ↗</a>
+            <!-- EDITA AQUÍ: pon tu usuario de GitHub -->
+            <a class="link" href="https://github.com/TU_USUARIO/sistema-libreria" target="_blank" rel="noopener noreferrer" data-cursor="abrir">ver repo <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
           </article>
 
           <article class="card mint" style="--r:1.2deg">
-            <span class="num">02</span>
+            <div class="card-top"><span class="num">02</span><span class="card-ico"><svg class="ico"><use href="#i-globe"/></svg></span></div>
             <h3>Esta página</h3>
             <p>lrmartinez.dev. Todavía en obra, pero ya con animaciones, confeti escondido y cero plantillas. Sí, la estás viendo ahorita.</p>
             <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            <a class="link" href="https://github.com/TU_USUARIO/lrmartinez-web" target="_blank" rel="noopener" data-cursor="abrir">ver repo ↗</a>
+            <a class="link" href="https://github.com/TU_USUARIO/lrmartinez-web" target="_blank" rel="noopener noreferrer" data-cursor="abrir">ver repo <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
           </article>
 
           <article class="card tomato" style="--r:-1deg">
-            <span class="num">03</span>
+            <div class="card-top"><span class="num">03</span><span class="card-ico"><svg class="ico"><use href="#i-flask"/></svg></span></div>
             <h3>Experimentos</h3>
             <p>Cosas chiquitas que hago para entender cómo funcionan las cosas: ejercicios, retos y pruebas que a veces ni subo (a veces sí).</p>
             <ul class="tags"><li>retos</li><li>práctica</li><li>prueba y error</li></ul>
-            <a class="link" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir">mi GitHub ↗</a>
+            <a class="link" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" data-cursor="abrir">mi GitHub <svg class="ico"><use href="#i-arrow-ur"/></svg></a>
           </article>
 
           <article class="card ghost" style="--r:1.5deg">
-            <span class="num">04</span>
+            <div class="card-top"><span class="num">04</span><span class="card-ico"><svg class="ico"><use href="#i-plus"/></svg></span></div>
             <h3>El siguiente…</h3>
             <p>Todavía no existe, pero ya tiene lugar reservado. ¿Tienes una idea o un problema que resolver? Escríbeme.</p>
-            <a class="link" href="#contacto" data-cursor="hablemos">proponer algo ↓</a>
+            <a class="link" href="#contacto" data-cursor="hablemos">proponer algo <svg class="ico"><use href="#i-arrow-down"/></svg></a>
           </article>
         </div>
 
-        <div class="hs-bar" aria-hidden="true"><i id="hsBar"></i></div>
+        <div class="hs-bar" id="hsBarWrap" aria-hidden="true"><i id="hsBar"></i></div>
       </div>
     </section>
 
@@ -167,22 +256,22 @@
         <span><i class="dot hard"></i> sufriendo</span>
       </div>
 
-      <!-- ✏️ EDITA AQUÍ: cambia/añade tecnologías. Clases: ok | learn | hard -->
+      <!-- EDITA AQUÍ: cambia o añade tecnologías. Clases: ok | learn | hard -->
       <div class="chips" id="chips">
-        <span class="chip ok" data-sp="-0.10" style="--r:-4deg">HTML</span>
-        <span class="chip ok" data-sp="0.08" style="--r:3deg">CSS</span>
-        <span class="chip learn" data-sp="-0.16" style="--r:-2deg">JavaScript</span>
-        <span class="chip learn" data-sp="0.12" style="--r:5deg">React</span>
-        <span class="chip learn" data-sp="-0.06" style="--r:-6deg">Node.js</span>
-        <span class="chip ok" data-sp="0.18" style="--r:2deg">MySQL</span>
-        <span class="chip ok" data-sp="-0.14" style="--r:4deg">Git</span>
-        <span class="chip ok" data-sp="0.05" style="--r:-3deg">GitHub</span>
-        <span class="chip hard" data-sp="0.15" style="--r:-5deg">centrar un div</span>
-        <span class="chip hard" data-sp="-0.09" style="--r:3deg">CORS</span>
+        <span class="chip ok" data-sp="-0.10" style="--r:-4deg"><svg class="ico"><use href="#i-code"/></svg>HTML</span>
+        <span class="chip ok" data-sp="0.08" style="--r:3deg"><svg class="ico"><use href="#i-layers"/></svg>CSS</span>
+        <span class="chip learn" data-sp="-0.16" style="--r:-2deg"><svg class="ico"><use href="#i-zap"/></svg>JavaScript</span>
+        <span class="chip learn" data-sp="0.12" style="--r:5deg"><svg class="ico"><use href="#i-atom"/></svg>React</span>
+        <span class="chip learn" data-sp="-0.06" style="--r:-6deg"><svg class="ico"><use href="#i-server"/></svg>Node.js</span>
+        <span class="chip ok" data-sp="0.18" style="--r:2deg"><svg class="ico"><use href="#i-database"/></svg>MySQL</span>
+        <span class="chip ok" data-sp="-0.14" style="--r:4deg"><svg class="ico"><use href="#i-branch"/></svg>Git</span>
+        <span class="chip ok" data-sp="0.05" style="--r:-3deg"><svg class="ico"><use href="#i-github"/></svg>GitHub</span>
+        <span class="chip hard" data-sp="0.15" style="--r:-5deg"><svg class="ico"><use href="#i-alert"/></svg>centrar un div</span>
+        <span class="chip hard" data-sp="-0.09" style="--r:3deg"><svg class="ico"><use href="#i-lock"/></svg>CORS</span>
       </div>
     </section>
 
-    <!-- ============ CAMINO / ROADMAP ============ -->
+    <!-- ============ CAMINO ============ -->
     <section class="road" id="camino" data-bg="#f3ecdf" data-ink="#14110f">
       <div class="reveal">
         <p class="tag">04 / camino</p>
@@ -192,23 +281,28 @@
       <div class="road-list" id="roadList">
         <div class="road-line"><div class="road-fill" id="roadFill"></div></div>
 
-        <div class="step done reveal" data-icon="✓">
+        <div class="step done reveal">
+          <span class="step-ico"><svg class="ico"><use href="#i-check"/></svg></span>
           <h3>Comprar el dominio</h3>
           <p>Lo más difícil: elegir el nombre.</p>
         </div>
-        <div class="step done reveal" data-icon="✓">
+        <div class="step done reveal">
+          <span class="step-ico"><svg class="ico"><use href="#i-check"/></svg></span>
           <h3>Subir una página de espera</h3>
           <p>Esta que estás viendo.</p>
         </div>
-        <div class="step now reveal" data-icon="⚙">
+        <div class="step now reveal">
+          <span class="step-ico"><svg class="ico"><use href="#i-wrench"/></svg></span>
           <h3>Armar el portafolio de verdad</h3>
           <p>En eso estamos.</p>
         </div>
-        <div class="step reveal" data-icon="…">
+        <div class="step reveal">
+          <span class="step-ico"><svg class="ico"><use href="#i-clock"/></svg></span>
           <h3>Más proyectos, con mejor código</h3>
           <p>Cuando lo anterior deje de dar pena.</p>
         </div>
-        <div class="step reveal" data-icon="★">
+        <div class="step reveal">
+          <span class="step-ico"><svg class="ico"><use href="#i-star"/></svg></span>
           <h3>Conquistar el mundo (o conseguir chamba)</h3>
           <p>Lo que llegue primero.</p>
         </div>
@@ -218,16 +312,19 @@
     <!-- ============ NÚMEROS ============ -->
     <section class="stats" data-bg="#7be0b0" data-ink="#14110f">
       <div class="stat reveal">
+        <svg class="ico big"><use href="#i-coffee"/></svg>
         <b data-count="342">0</b>
-        <span>cafés tomados ☕</span>
+        <span>cafés tomados</span>
       </div>
       <div class="stat reveal" style="--d:.12s">
+        <svg class="ico big"><use href="#i-bug"/></svg>
         <b data-count="9001">0</b>
-        <span>errores en consola 🐛</span>
+        <span>errores en consola</span>
       </div>
       <div class="stat reveal" style="--d:.24s">
+        <svg class="ico big"><use href="#i-commit"/></svg>
         <b data-count="128">0</b>
-        <span>commits "arreglos" 💾</span>
+        <span>commits "arreglos"</span>
       </div>
       <p class="stats-foot reveal">*datos 100% reales (mentira, pero cerca)</p>
     </section>
@@ -237,22 +334,43 @@
   <!-- ============ CONTACTO ============ -->
   <footer class="contact" id="contacto" data-bg="#14110f" data-ink="#f3ecdf">
     <p class="tag">05 / contacto</p>
-    <h2 class="big">¿HABLA<wbr />MOS?</h2>
+    <h2 class="big">¿HABLAMOS?</h2>
     <p class="sub reveal">Si tienes chamba, una idea, o quieres corregirme el código, escríbeme. Prometo no tardar mucho en contestar.</p>
 
-    <!-- ✏️ EDITA AQUÍ: tus links reales -->
+    <!-- EDITA AQUÍ: correo, GitHub y LinkedIn reales -->
     <ul class="links">
-      <li><a href="mailto:TU_CORREO@ejemplo.com" data-cursor="escribir"><b>correo</b><span>↗</span></a></li>
-      <li><a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir"><b>github</b><span>↗</span></a></li>
-      <li><a href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir"><b>linkedin</b><span>↗</span></a></li>
+      <li>
+        <a href="https://wa.me/50259270517" target="_blank" rel="noopener noreferrer" data-cursor="escribir">
+          <b><svg class="ico fill"><use href="#i-whatsapp"/></svg>whatsapp <small>+502 5927 0517</small></b>
+          <span><svg class="ico"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:TU_CORREO@ejemplo.com" data-cursor="escribir">
+          <b><svg class="ico"><use href="#i-mail"/></svg>correo</b>
+          <span><svg class="ico"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" data-cursor="abrir">
+          <b><svg class="ico"><use href="#i-github"/></svg>github</b>
+          <span><svg class="ico"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener noreferrer" data-cursor="abrir">
+          <b><svg class="ico"><use href="#i-linkedin"/></svg>linkedin</b>
+          <span><svg class="ico"><use href="#i-arrow-ur"/></svg></span>
+        </a>
+      </li>
     </ul>
 
     <button class="btn dont" id="dont" type="button">NO presiones este botón</button>
 
     <div class="foot-row">
-      <span>© <span id="year"></span> lrmartinez.dev · hecho con ganas y café</span>
+      <span>© <span id="year"></span> Luis Martínez · lrmartinez.dev</span>
       <span class="clock" id="clock">--:--:--</span>
-      <a href="#top" data-cursor="subir">volver arriba ↑</a>
+      <a href="#top" data-cursor="subir">volver arriba <svg class="ico"><use href="#i-arrow-up"/></svg></a>
     </div>
   </footer>
 
