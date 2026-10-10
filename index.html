@@ -1,433 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Próximamente. En ruta de aprendizaje."
-    >
-
-    <title>Próximamente...</title>
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lrmartinez.dev · en construcción 🚧</title>
+  <meta name="description" content="Portafolio de LR Martínez, dev junior. El sitio todavía se está construyendo, pero ya hay mucho que ver." />
+  <meta name="theme-color" content="#f3ecdf" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Caveat:wght@600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
-
-    <main>
-
-        <section class="hero">
-
-            <div class="room" id="room">
-
-                <div class="wall-texture"></div>
-
-                <div class="window">
-
-                    <div class="sky"></div>
-
-                    <div class="moon"></div>
-
-                    <div class="city">
-                        <div class="building b1"></div>
-                        <div class="building b2"></div>
-                        <div class="building b3"></div>
-                        <div class="building b4"></div>
-                        <div class="building b5"></div>
-                    </div>
-
-                    <div
-                        class="rain"
-                        id="rain"
-                    ></div>
-
-                    <div class="window-v"></div>
-                    <div class="window-h"></div>
-
-                </div>
-
-                <div class="message">
-
-                    <div class="message-small">
-                        LM / DEV
-                    </div>
-
-                    <h1>
-                        PRÓXIMAMENTE<span class="cursor">_</span>
-                    </h1>
-
-                    <p>
-                        EN RUTA DE APRENDIZAJE
-                    </p>
-
-                </div>
-
-                <div class="light-cone"></div>
-
-                <div class="lamp-system">
-
-                    <div class="lamp-wire"></div>
-
-                    <div class="bulb-holder"></div>
-
-                    <div class="bulb"></div>
-
-                    <div
-                        class="pull-container"
-                        id="pullArea"
-                        role="button"
-                        tabindex="0"
-                        aria-label="Jalar cordón para encender o apagar la luz"
-                    >
-
-                        <div
-                            class="rope"
-                            id="rope"
-                        ></div>
-
-                        <div
-                            class="handle"
-                            id="handle"
-                        ></div>
-
-                    </div>
-
-                    <div class="pull-hint">
-                        JALAR
-                    </div>
-
-                </div>
-
-                <div class="monitor">
-
-                    <div class="screen">
-
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-
-                    </div>
-
-                    <div class="monitor-stand"></div>
-
-                </div>
-
-                <div class="desk"></div>
-
-                <div class="keyboard"></div>
-
-                <div class="coffee"></div>
-
-                <div class="steam one"></div>
-                <div class="steam two"></div>
-
-                <div class="chair"></div>
-
-                <div class="person">
-
-                    <div class="head">
-
-                        <div class="hair"></div>
-
-                        <div class="headphones"></div>
-
-                    </div>
-
-                    <div class="body"></div>
-
-                </div>
-
-                <div class="cat">
-
-                    <div class="ear one"></div>
-
-                    <div class="ear two"></div>
-
-                    <div class="tail"></div>
-
-                </div>
-
-                <div
-                    class="clock"
-                    id="clock"
-                >
-                    00:00
-                </div>
-
-                <div
-                    class="flash"
-                    id="flash"
-                ></div>
-
-                <div class="pixel-overlay"></div>
-
-            </div>
-
-        </section>
-
-        <section
-            class="comments-section"
-            id="comments"
-        >
-
-            <div class="comments-wrapper">
-
-                <div class="comments-header">
-
-                    <span class="section-label">
-                        LM / VISITANTES
-                    </span>
-
-                    <h2>
-                        Dejar comentario
-                    </h2>
-
-                    <p>
-                        Si llegaste hasta aquí, puedes dejar algo para el camino.
-                    </p>
-
-                </div>
-
-                <div class="comments-layout">
-
-                    <div class="comment-form-container">
-
-                        <form
-                            class="comment-form"
-                            id="commentForm"
-                        >
-
-                            <div class="field">
-
-                                <label for="name">
-                                    Nombre
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    maxlength="40"
-                                    autocomplete="name"
-                                    placeholder="Tu nombre"
-                                    required
-                                >
-
-                            </div>
-
-                            <div class="field">
-
-                                <label for="comment">
-                                    Comentario
-                                </label>
-
-                                <textarea
-                                    id="comment"
-                                    name="comment"
-                                    maxlength="500"
-                                    placeholder="Escribe algo..."
-                                    required
-                                ></textarea>
-
-                                <div class="field-footer">
-
-                                    <span
-                                        class="form-status"
-                                        id="formStatus"
-                                        aria-live="polite"
-                                    ></span>
-
-                                    <span
-                                        class="counter"
-                                        id="commentCounter"
-                                    >
-                                        0 / 500
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                            <button
-                                class="submit-button"
-                                id="submitButton"
-                                type="submit"
-                            >
-                                <span>
-                                    PUBLICAR COMENTARIO
-                                </span>
-
-                                <span class="button-arrow">
-                                    →
-                                </span>
-                            </button>
-
-                        </form>
-
-                    </div>
-
-                    <div class="comments-info">
-
-                        <div class="info-number">
-                            <span id="commentsCount">
-                                000
-                            </span>
-                        </div>
-
-                        <div class="info-text">
-                            COMENTARIOS EN EL CAMINO
-                        </div>
-
-                        <div class="info-line"></div>
-
-                        <p>
-                            Cada mensaje formará parte de esta pequeña etapa mientras el sitio continúa creciendo.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="carousel-section">
-
-                    <div class="carousel-heading">
-
-                        <div>
-                            <span class="section-label">
-                                MENSAJES
-                            </span>
-
-                            <h3>
-                                Lo que han dejado por aquí
-                            </h3>
-                        </div>
-
-                        <div class="carousel-status">
-
-                            <span class="status-dot"></span>
-
-                            <span id="carouselStatus">
-                                MOVIÉNDOSE
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    <div
-                        class="carousel"
-                        id="carousel"
-                    >
-
-                        <div
-                            class="carousel-track"
-                            id="carouselTrack"
-                        ></div>
-
-                    </div>
-
-                    <div class="carousel-help">
-                        PASA EL CURSOR PARA DETENER · SELECCIONA UN MENSAJE PARA LEERLO
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <div
-        class="comment-modal"
-        id="commentModal"
-        aria-hidden="true"
-    >
-
-        <div class="modal-backdrop"></div>
-
-        <div
-            class="modal-stage"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modalName"
-        >
-
-            <div class="modal-decoration decoration-one"></div>
-            <div class="modal-decoration decoration-two"></div>
-            <div class="modal-decoration decoration-three"></div>
-
-            <div class="modal-content">
-
-                <div class="modal-top">
-
-                    <div class="modal-code">
-                        MENSAJE / <span id="modalNumber">001</span>
-                    </div>
-
-                    <button
-                        class="modal-close"
-                        id="modalClose"
-                        type="button"
-                        aria-label="Cerrar comentario"
-                    >
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                </div>
-
-                <div class="modal-author">
-
-                    <div
-                        class="modal-avatar"
-                        id="modalAvatar"
-                    >
-                        L
-                    </div>
-
-                    <div>
-
-                        <span class="modal-label">
-                            ESCRITO POR
-                        </span>
-
-                        <h2 id="modalName">
-                            Nombre
-                        </h2>
-
-                    </div>
-
-                </div>
-
-                <div class="modal-divider"></div>
-
-                <p
-                    class="modal-message"
-                    id="modalMessage"
-                ></p>
-
-                <div class="modal-footer">
-
-                    <span id="modalDate"></span>
-
-                    <span>
-                        LM / EN RUTA DE APRENDIZAJE
-                    </span>
-
-                </div>
-
-            </div>
-
+<body class="loading">
+
+  <!-- Pantalla de carga -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-num"><span id="loadNum">0</span>%</div>
+    <p id="loadMsg">armando la página…</p>
+  </div>
+
+  <div class="progress-top" id="progTop" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><div class="ring"><span id="clabel"></span></div></div>
+  <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+
+  <div class="meter" id="meter" aria-hidden="true">
+    <span class="m-a">🚧 sitio construido al <b id="pct">0</b>%</span>
+    <span class="m-b">100%… mentira, falta bastante</span>
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#top" id="brand">lr<span>.dev</span></a>
+    <nav aria-label="Principal">
+      <a href="#sobre">sobre mí</a>
+      <a href="#proyectos">proyectos</a>
+      <a href="#stack">stack</a>
+      <a href="#camino">camino</a>
+      <a href="#contacto">contacto</a>
+    </nav>
+    <div class="pill">🚧 en construcción</div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-bg="#f3ecdf" data-ink="#14110f">
+      <div class="stickers" aria-hidden="true">
+        <div class="sticker st-1" data-speed="0.10" data-depth="1.2" style="--rot:12deg">v0.0.1<br />beta<br />(muy beta)</div>
+        <div class="sticker st-2" data-speed="0.22" data-depth="-1" style="--rot:-8deg">WIP 🚧</div>
+        <div class="sticker st-3" data-speed="0.06" data-depth="1.6" style="--rot:5deg">console.log("hola");</div>
+        <div class="hand st-4" data-speed="0.14" data-depth="0.8">
+          sí, soy yo
+          <svg viewBox="0 0 120 60" width="110" height="55" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 8 C 40 -4, 90 6, 108 44" /><path d="M92 38 L108 46 L110 28" /></svg>
+        </div>
+      </div>
+
+      <p class="eyebrow reveal">// lrmartinez.dev · v0.0.1</p>
+
+      <h1 class="title" aria-label="Hola, soy LR Martínez">
+        <span class="line"><span class="split">HOLA,</span></span>
+        <span class="line"><span class="split">SOY LR</span></span>
+        <span class="line"><span class="split accent-word">MARTÍNEZ</span></span>
+      </h1>
+
+      <!-- ✏️ EDITA AQUÍ: tu presentación corta -->
+      <p class="lead reveal" style="--d:.15s">
+        Dev junior en formación. Hago cosas con código, café y mucho
+        <span class="hl">"¿por qué no funciona?"</span>
+      </p>
+
+      <div class="cta reveal" style="--d:.3s">
+        <a class="btn" href="#proyectos">ver lo que he hecho</a>
+        <a class="btn ghost" href="#contacto">hablemos</a>
+      </div>
+
+      <a class="scroll-badge" href="#sobre" aria-label="Bajar" data-cursor="bajar">
+        <svg viewBox="0 0 130 130" aria-hidden="true">
+          <defs><path id="circ" d="M65,65 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0" /></defs>
+          <text><textPath href="#circ" textLength="296" lengthAdjust="spacing">SCROLL ↓ SCROLL ↓ SCROLL ↓ SCROLL ↓ </textPath></text>
+        </svg>
+        <b>↓</b>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquees" data-bg="#14110f" data-ink="#f3ecdf" aria-hidden="true">
+      <div class="mq mq-a" data-dir="-1">
+        <div class="mq-track">
+          <div class="mq-group"><span>en construcción</span><i>✺</i><span>aguanta tantito</span><i>✺</i><span>junior pero con ganas</span><i>✺</i></div>
+        </div>
+      </div>
+      <div class="mq mq-b" data-dir="1">
+        <div class="mq-track">
+          <div class="mq-group"><span>funciona en mi compu</span><i>★</i><span>commit: "arreglos"</span><i>★</i><span>git push --force (jamás)</span><i>★</i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ (texto que se ilumina con el scroll) ============ -->
+    <section class="about" id="sobre" data-bg="#14110f" data-ink="#f3ecdf">
+      <div class="about-sticky">
+        <p class="tag">01 / sobre mí</p>
+        <!-- ✏️ EDITA AQUÍ: las palabras con * al inicio salen resaltadas -->
+        <p class="words" id="words" data-text="Estoy aprendiendo a programar *construyendo* cosas de verdad. Me equivoco, lo arreglo, aprendo y vuelvo a empezar. No soy experto en nada todavía, pero me emociona *todo*. Si algo se ve bonito y además *funciona*, ya me ganó.">
+          Estoy aprendiendo a programar construyendo cosas de verdad. Me equivoco, lo arreglo, aprendo y vuelvo a empezar. No soy experto en nada todavía, pero me emociona todo. Si algo se ve bonito y además funciona, ya me ganó.
+        </p>
+        <p class="note" id="note">(sí, sigo aprendiendo)</p>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS (scroll horizontal) ============ -->
+    <section class="hscroll" id="proyectos" data-bg="#ffd23f" data-ink="#14110f">
+      <div class="hs-sticky">
+        <div class="hs-head reveal">
+          <p class="tag">02 / proyectos</p>
+          <h2>Lo que he armado <span class="hl">(hasta ahora)</span></h2>
         </div>
 
+        <div class="hs-track" id="hsTrack">
+          <article class="card" style="--r:-1.5deg">
+            <span class="num">01</span>
+            <h3>Sistema de librería</h3>
+            <p>Sistema web para una tienda de libros, papelería y útiles escolares. Productos por SKU, precios en quetzales y ventas rápidas.</p>
+            <ul class="tags"><li>React</li><li>Node.js</li><li>MySQL</li></ul>
+            <!-- ✏️ EDITA AQUÍ: pon tu usuario de GitHub -->
+            <a class="link" href="https://github.com/TU_USUARIO/sistema-libreria" target="_blank" rel="noopener" data-cursor="abrir">ver repo ↗</a>
+          </article>
+
+          <article class="card mint" style="--r:1.2deg">
+            <span class="num">02</span>
+            <h3>Esta página</h3>
+            <p>lrmartinez.dev. Todavía en obra, pero ya con animaciones, confeti escondido y cero plantillas. Sí, la estás viendo ahorita.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="link" href="https://github.com/TU_USUARIO/lrmartinez-web" target="_blank" rel="noopener" data-cursor="abrir">ver repo ↗</a>
+          </article>
+
+          <article class="card tomato" style="--r:-1deg">
+            <span class="num">03</span>
+            <h3>Experimentos</h3>
+            <p>Cosas chiquitas que hago para entender cómo funcionan las cosas: ejercicios, retos y pruebas que a veces ni subo (a veces sí).</p>
+            <ul class="tags"><li>retos</li><li>práctica</li><li>prueba y error</li></ul>
+            <a class="link" href="https://github.com/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir">mi GitHub ↗</a>
+          </article>
+
+          <article class="card ghost" style="--r:1.5deg">
+            <span class="num">04</span>
+            <h3>El siguiente…</h3>
+            <p>Todavía no existe, pero ya tiene lugar reservado. ¿Tienes una idea o un problema que resolver? Escríbeme.</p>
+            <a class="link" href="#contacto" data-cursor="hablemos">proponer algo ↓</a>
+          </article>
+        </div>
+
+        <div class="hs-bar" aria-hidden="true"><i id="hsBar"></i></div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section class="stack" id="stack" data-bg="#f3ecdf" data-ink="#14110f">
+      <div class="reveal">
+        <p class="tag">03 / stack</p>
+        <h2 class="h2">Con qué trabajo<br /><span class="hl">(y con qué sufro)</span></h2>
+      </div>
+
+      <div class="legend reveal" style="--d:.1s">
+        <span><i class="dot ok"></i> cómodo</span>
+        <span><i class="dot learn"></i> aprendiendo</span>
+        <span><i class="dot hard"></i> sufriendo</span>
+      </div>
+
+      <!-- ✏️ EDITA AQUÍ: cambia/añade tecnologías. Clases: ok | learn | hard -->
+      <div class="chips" id="chips">
+        <span class="chip ok" data-sp="-0.10" style="--r:-4deg">HTML</span>
+        <span class="chip ok" data-sp="0.08" style="--r:3deg">CSS</span>
+        <span class="chip learn" data-sp="-0.16" style="--r:-2deg">JavaScript</span>
+        <span class="chip learn" data-sp="0.12" style="--r:5deg">React</span>
+        <span class="chip learn" data-sp="-0.06" style="--r:-6deg">Node.js</span>
+        <span class="chip ok" data-sp="0.18" style="--r:2deg">MySQL</span>
+        <span class="chip ok" data-sp="-0.14" style="--r:4deg">Git</span>
+        <span class="chip ok" data-sp="0.05" style="--r:-3deg">GitHub</span>
+        <span class="chip hard" data-sp="0.15" style="--r:-5deg">centrar un div</span>
+        <span class="chip hard" data-sp="-0.09" style="--r:3deg">CORS</span>
+      </div>
+    </section>
+
+    <!-- ============ CAMINO / ROADMAP ============ -->
+    <section class="road" id="camino" data-bg="#f3ecdf" data-ink="#14110f">
+      <div class="reveal">
+        <p class="tag">04 / camino</p>
+        <h2 class="h2">Lo que <span class="hl">viene</span></h2>
+      </div>
+
+      <div class="road-list" id="roadList">
+        <div class="road-line"><div class="road-fill" id="roadFill"></div></div>
+
+        <div class="step done reveal" data-icon="✓">
+          <h3>Comprar el dominio</h3>
+          <p>Lo más difícil: elegir el nombre.</p>
+        </div>
+        <div class="step done reveal" data-icon="✓">
+          <h3>Subir una página de espera</h3>
+          <p>Esta que estás viendo.</p>
+        </div>
+        <div class="step now reveal" data-icon="⚙">
+          <h3>Armar el portafolio de verdad</h3>
+          <p>En eso estamos.</p>
+        </div>
+        <div class="step reveal" data-icon="…">
+          <h3>Más proyectos, con mejor código</h3>
+          <p>Cuando lo anterior deje de dar pena.</p>
+        </div>
+        <div class="step reveal" data-icon="★">
+          <h3>Conquistar el mundo (o conseguir chamba)</h3>
+          <p>Lo que llegue primero.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NÚMEROS ============ -->
+    <section class="stats" data-bg="#7be0b0" data-ink="#14110f">
+      <div class="stat reveal">
+        <b data-count="342">0</b>
+        <span>cafés tomados ☕</span>
+      </div>
+      <div class="stat reveal" style="--d:.12s">
+        <b data-count="9001">0</b>
+        <span>errores en consola 🐛</span>
+      </div>
+      <div class="stat reveal" style="--d:.24s">
+        <b data-count="128">0</b>
+        <span>commits "arreglos" 💾</span>
+      </div>
+      <p class="stats-foot reveal">*datos 100% reales (mentira, pero cerca)</p>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTACTO ============ -->
+  <footer class="contact" id="contacto" data-bg="#14110f" data-ink="#f3ecdf">
+    <p class="tag">05 / contacto</p>
+    <h2 class="big">¿HABLA<wbr />MOS?</h2>
+    <p class="sub reveal">Si tienes chamba, una idea, o quieres corregirme el código, escríbeme. Prometo no tardar mucho en contestar.</p>
+
+    <!-- ✏️ EDITA AQUÍ: tus links reales -->
+    <ul class="links">
+      <li><a href="mailto:TU_CORREO@ejemplo.com" data-cursor="escribir"><b>correo</b><span>↗</span></a></li>
+      <li><a href="https://github.com/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir"><b>github</b><span>↗</span></a></li>
+      <li><a href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener" data-cursor="abrir"><b>linkedin</b><span>↗</span></a></li>
+    </ul>
+
+    <button class="btn dont" id="dont" type="button">NO presiones este botón</button>
+
+    <div class="foot-row">
+      <span>© <span id="year"></span> lrmartinez.dev · hecho con ganas y café</span>
+      <span class="clock" id="clock">--:--:--</span>
+      <a href="#top" data-cursor="subir">volver arriba ↑</a>
     </div>
+  </footer>
 
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
